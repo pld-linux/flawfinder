@@ -2,12 +2,12 @@
 Summary:	Examines C/C++ source code for security flaws
 Summary(pl):	Wyszukiwarka zagro¿eñ bezpieczeñstwa w kodzie C/C++
 Name:		flawfinder
-Version:	1.22
+Version:	1.23
 Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://www.dwheeler.com/flawfinder/%{name}-%{version}.tar.gz
-# Source0-md5:	a6746b5e8b443e777ebd223edae33e6d
+# Source0-md5:	f783cf53868b9f2479333e254409b79f
 Patch0:		%{name}-python.patch
 URL:		http://www.dwheeler.com/flawfinder/
 BuildRequires:	rpm-pythonprov
