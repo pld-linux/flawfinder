@@ -1,13 +1,13 @@
-%include	/usr/lib/rpm/macros.python
+#%include	/usr/lib/rpm/macros.python
 Summary:	Examines C/C++ source code for security flaws
 Summary(pl):	Wyszukiwarka zagro¿eñ bezpieczeñstwa w kodzie C/C++
 Name:		flawfinder
-Version:	1.23
+Version:	1.24
 Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://www.dwheeler.com/flawfinder/%{name}-%{version}.tar.gz
-# Source0-md5:	f783cf53868b9f2479333e254409b79f
+# Source0-md5:	85a291ae9bf5a6eec823169057f950df
 Patch0:		%{name}-python.patch
 URL:		http://www.dwheeler.com/flawfinder/
 BuildRequires:	rpm-pythonprov
