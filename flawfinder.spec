@@ -4,14 +4,16 @@ Name:		flawfinder
 Version:	0.20
 Release:	1
 License:	GPL
-Group:		Development
-Group(de):	Entwicklung
+Group:		Development/Tools
+Group(de):	Entwicklung/Werkzeuge
 Group(es):	Desarrollo
-Group(pl):	Programowanie
+Group(fr):	Development/Outils
+Group(pl):	Programowanie/NarzЙdzia
 Group(pt_BR):	Desenvolvimento
 Group(ru):	Разработка
 Group(uk):	Розробка
 Source0:	http://www.dwheeler.com/flawfinder/%{name}-%{version}.tar.gz
+Patch0:		%{name}-python.patch
 Requires:	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -25,6 +27,7 @@ niebezpieczne fragmenty.
 
 %prep
 %setup -q 
+%patch0 -p1
 
 %build
 %{__make}
@@ -34,7 +37,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d ${RPM_BUILD_ROOT}{%{_bindir},%{_mandir}/man1}
 
 install flawfinder ${RPM_BUILD_ROOT}%{_bindir}/flawfinder
-install flawfinder.1.gz ${RPM_BUILD_ROOT}%{_mandir}/man1/flawfinder.1.gz
+install flawfinder.1.gz ${RPM_BUILD_ROOT}%{_mandir}/man1
 
 gzip -9nf README ChangeLog
 
@@ -43,6 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,ChangeLog}.gz
-%{_mandir}/man1/*
+%doc *.gz
 %attr(755,root,root) %{_bindir}/flawfinder
+%{_mandir}/man1/*
