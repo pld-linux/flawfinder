@@ -2,7 +2,7 @@
 Summary:	Examines C/C++ source code for security flaws
 Summary(pl):	Wyszukiwarka zagro¿eñ bezpieczeñstwa w kodzie C/C++
 Name:		flawfinder
-Version:	1.00
+Version:	1.01
 Release:	1
 License:	GPL
 Group:		Development/Tools
