@@ -1,7 +1,8 @@
+%include	/usr/lib/rpm/macros.python
 Summary:	Examines C/C++ source code for security flaws
 Summary(pl):	Wyszukiwarka zagro©eЯ bezpieczeЯstwa w kodzie C/C++
 Name:		flawfinder
-Version:	0.20
+Version:	0.21
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -14,6 +15,8 @@ Group(ru):	Разработка
 Group(uk):	Розробка
 Source0:	http://www.dwheeler.com/flawfinder/%{name}-%{version}.tar.gz
 Patch0:		%{name}-python.patch
+URL:		http://www.dwheeler.com/flawfinder/
+BuildRequires:	rpm-pythonprov
 Requires:	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
