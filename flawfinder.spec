@@ -1,48 +1,48 @@
+#%include	/usr/lib/rpm/macros.python
 Summary:	Examines C/C++ source code for security flaws
 Summary(pl):	Wyszukiwarka zagroøeÒ bezpieczeÒstwa w kodzie C/C++
 Name:		flawfinder
-Version:	0.20
-Release:	1
+Version:	1.25
+Release:	1.1
 License:	GPL
-Group:		Development
-Group(de):	Entwicklung
-Group(es):	Desarrollo
-Group(pl):	Programowanie
-Group(pt_BR):	Desenvolvimento
-Group(ru):	Ú¡⁄“¡¬œ‘À¡
-Group(uk):	Úœ⁄“œ¬À¡
+Group:		Development/Tools
 Source0:	http://www.dwheeler.com/flawfinder/%{name}-%{version}.tar.gz
+# Source0-md5:	fa5b644e00aa4862de5b790f0e1a3ad7
+Patch0:		%{name}-python.patch
+URL:		http://www.dwheeler.com/flawfinder/
+BuildRequires:	rpm-pythonprov
 Requires:	python
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Flawfinder scans through C/C++ source code, finding potentially
-dangerous code. It's released under the GNU Public License (GPL).
+dangerous code. It's released under the GNU General Public License
+(GPL).
 
 %description -l pl
 Flawfinder przeszukuje kod ºrÛd≥owy C/C++, znajduj±c potencjalnie
 niebezpieczne fragmenty.
 
 %prep
-%setup -q 
+%setup -q
+%patch0 -p1
 
 %build
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d ${RPM_BUILD_ROOT}{%{_bindir},%{_mandir}/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install flawfinder ${RPM_BUILD_ROOT}%{_bindir}/flawfinder
-install flawfinder.1.gz ${RPM_BUILD_ROOT}%{_mandir}/man1/flawfinder.1.gz
-
-gzip -9nf README ChangeLog
+install flawfinder $RPM_BUILD_ROOT%{_bindir}
+install flawfinder.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,ChangeLog}.gz
-%{_mandir}/man1/*
+%doc ChangeLog README flawfinder.pdf flaw-defect-report correct-results*
 %attr(755,root,root) %{_bindir}/flawfinder
+%{_mandir}/man1/*
