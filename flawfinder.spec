@@ -22,7 +22,7 @@ Flawfinder przeszukuje kod ¼ród³owy C/C++, znajduj±c potencjalnie
 niebezpieczne fragmenty.
 
 %prep
-%setup -q 
+%setup -q
 %patch0 -p1
 
 %build
