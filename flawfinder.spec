@@ -2,7 +2,7 @@
 Summary:	Examines C/C++ source code for security flaws
 Summary(pl):	Wyszukiwarka zagro¿eñ bezpieczeñstwa w kodzie C/C++
 Name:		flawfinder
-Version:	0.22
+Version:	1.00
 Release:	1
 License:	GPL
 Group:		Development/Tools
@@ -40,6 +40,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README ChangeLog announcement
+%doc ChangeLog README flawfinder.pdf flaw-defect-report
 %attr(755,root,root) %{_bindir}/flawfinder
 %{_mandir}/man1/*
