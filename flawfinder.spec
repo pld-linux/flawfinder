@@ -6,13 +6,6 @@ Version:	0.21
 Release:	1
 License:	GPL
 Group:		Development/Tools
-Group(de):	Entwicklung/Werkzeuge
-Group(es):	Desarrollo
-Group(fr):	Development/Outils
-Group(pl):	Programowanie/NarzЙdzia
-Group(pt_BR):	Desenvolvimento
-Group(ru):	Разработка
-Group(uk):	Розробка
 Source0:	http://www.dwheeler.com/flawfinder/%{name}-%{version}.tar.gz
 Patch0:		%{name}-python.patch
 URL:		http://www.dwheeler.com/flawfinder/
