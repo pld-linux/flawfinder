@@ -12,11 +12,13 @@ Patch0:		%{name}-python.patch
 URL:		http://www.dwheeler.com/flawfinder/
 BuildRequires:	rpm-pythonprov
 Requires:	python
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Flawfinder scans through C/C++ source code, finding potentially
-dangerous code. It's released under the GNU Public License (GPL).
+dangerous code. It's released under the GNU General Public License
+(GPL).
 
 %description -l pl
 Flawfinder przeszukuje kod ¼ród³owy C/C++, znajduj±c potencjalnie
@@ -31,7 +33,7 @@ niebezpieczne fragmenty.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d ${RPM_BUILD_ROOT}{%{_bindir},%{_mandir}/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install flawfinder ${RPM_BUILD_ROOT}%{_bindir}/flawfinder
 install flawfinder.1 ${RPM_BUILD_ROOT}%{_mandir}/man1
