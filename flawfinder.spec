@@ -35,8 +35,8 @@ niebezpieczne fragmenty.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install flawfinder ${RPM_BUILD_ROOT}%{_bindir}/flawfinder
-install flawfinder.1 ${RPM_BUILD_ROOT}%{_mandir}/man1
+install flawfinder $RPM_BUILD_ROOT%{_bindir}
+install flawfinder.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
