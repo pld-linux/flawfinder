@@ -1,5 +1,5 @@
 Summary:	Examines C/C++ source code for security flaws
-Summary(pl):	Wyszukiwarka zagroøeÒ bezpieczeÒstwa w kodzie C/C++
+Summary(pl.UTF-8):   Wyszukiwarka zagro≈ºe≈Ñ bezpiecze≈Ñstwa w kodzie C/C++
 Name:		flawfinder
 Version:	1.26
 Release:	2
@@ -21,8 +21,8 @@ Flawfinder scans through C/C++ source code, finding potentially
 dangerous code. It's released under the GNU General Public License
 (GPL).
 
-%description -l pl
-Flawfinder przeszukuje kod ºrÛd≥owy C/C++, znajduj±c potencjalnie
+%description -l pl.UTF-8
+Flawfinder przeszukuje kod ≈∫r√≥d≈Çowy C/C++, znajdujƒÖc potencjalnie
 niebezpieczne fragmenty.
 
 %prep
