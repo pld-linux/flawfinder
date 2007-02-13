@@ -1,5 +1,5 @@
 Summary:	Examines C/C++ source code for security flaws
-Summary(pl.UTF-8):   Wyszukiwarka zagrożeń bezpieczeństwa w kodzie C/C++
+Summary(pl.UTF-8):	Wyszukiwarka zagrożeń bezpieczeństwa w kodzie C/C++
 Name:		flawfinder
 Version:	1.26
 Release:	2
