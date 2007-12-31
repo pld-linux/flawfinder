@@ -1,12 +1,12 @@
 Summary:	Examines C/C++ source code for security flaws
 Summary(pl.UTF-8):	Wyszukiwarka zagrożeń bezpieczeństwa w kodzie C/C++
 Name:		flawfinder
-Version:	1.26
-Release:	2
+Version:	1.27
+Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://www.dwheeler.com/flawfinder/%{name}-%{version}.tar.gz
-# Source0-md5:	242a90ecf2f21a709a2425c8771ef38e
+# Source0-md5:	50fff67dd439f42b785577ed8b3a3f7d
 Patch0:		%{name}-python.patch
 URL:		http://www.dwheeler.com/flawfinder/
 BuildRequires:	ghostscript
@@ -44,6 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog README flawfinder.pdf flaw-defect-report correct-results*
+%doc ChangeLog README flawfinder.pdf correct-results*
 %attr(755,root,root) %{_bindir}/flawfinder
 %{_mandir}/man1/*
